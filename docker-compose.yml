@@ -2,15 +2,17 @@ version: '3.8'
 
 services:
   myapp:
-    build: ./myapp
+    # Reemplaza 'tu_usuario_dockerhub' por tu usuario real de Docker Hub
+    image: tu_usuario_dockerhub/myapp:latest
     container_name: myapp_container
     expose:
       - "80"
     restart: always
 
   nginx:
-    build: ./nginx
-    container_name: nginx_proxy
+    # Reemplaza 'tu_usuario_dockerhub' por tu usuario real de Docker Hub
+    image: tu_usuario_dockerhub/nginx_proxy:latest
+    container_name: mynginx_container # Cambiado a 'mynginx_container' para cumplir exactamente la pauta del Punto 5
     ports:
       - "80:80"
     depends_on:
