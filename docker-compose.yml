@@ -2,19 +2,16 @@ version: '3.8'
 
 services:
   myapp:
-    # Recuerda usar tu usuario real de Docker Hub aquí
-    image: tu_usuario_dockerhub/myapp:latest
+    image: bcamposrial/myapp:latest
     container_name: myapp_container
     expose:
       - "80"
-    # ¡AQUÍ agregamos el Bind Mount! 
     volumes:
       - ./myapp:/usr/share/nginx/html
     restart: always
 
   nginx:
-    # Recuerda usar tu usuario real de Docker Hub aquí
-    image: tu_usuario_dockerhub/nginx_proxy:latest
+    image: bcamposrial/nginx_proxy:latest
     container_name: mynginx_container
     ports:
       - "80:80"
